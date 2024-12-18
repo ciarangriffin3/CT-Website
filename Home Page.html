@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+	
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, inital-scale=1.0">
+
+<title>Celbridge Town - Welcome to Our Home Page</title>
+
+<meta name="description" content="Come and explore everything Celbridge Town AFC!">
+
+<meta name="keywords" content="Celbridge Town AFC, football club,  location, recent news">
+
+<meta name="author" content="Celbridge Town AFC">
+
+<link rel="stylesheet" href="Home Page.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+
+
+<body>
+	<header>
+		<img src="C:\Users\ciara\Pictures\updated club logo.jpg" alt="Club Logo" class="header-img left-img">
+		<img src="Images & Videos/IMG_0920.jpg" class="header-img right-img">
+	<h1> Celbridge Town AFC</h1>
+	<p> The Heart of the Game, The Soul of the Town </p>
+
+	<nav class="navigation-bar">
+		<a href="Gallery.html">Gallery</a>
+		<a href="League Table.html">League Table</a>
+		<a href="Contact Form.html">Contact Form</a>
+	</nav>
+	</header>
+
+<p class="intro-paragraph">
+Welcome to Celbridge Town AFC, where football is more than just a game.  We represent the soul of this great town, and are honoured to be powered by the passion of the local community. Our team doesn't only constitute the 11 players on the pitch, it's driven by the supporters, families and friends who come to cheer us on through rain and shine. From thrilling wins to hard-fought wars, Celbridge Town is where local heroes are made. Join us, as we strive to continue to build a legacy to match the one in our community! For any club queries make sure to contact us <a href="mailto;celbridgetownafc000@outlook.com">here </a>.
+</p>
+<p class="copyright">&copy; 2024 Celbridge Town AFC</p>
+
+
+
+<div class="container">
+	<div class="location-section">
+		<h2 class="section-heading">Club Location</h2>
+
+<div id="map"></div>
+</div>
+
+<div class="news-section">
+	<h2 class="section-heading">Recent Club News</h2>
+<div class="recent-news">
+<ul>
+	<li><a href="#" class="news-item" data-article="article1">Star Striker & Rapper Isaac Onoagarakpote "Young IZ" Performs in DCU</a></li>
+	<li><a href="#" class="news-item" data-article="article2">In-Form Full-Back Ciarán Griffin wins 5 A-Side Shield in Late Replacement Appearance</a></li>
+	<li><a href="#" class="news-item" data-article="article3">Club Captain Jamie Keane Releases Highly-Sought After Leg Workout</a></li>
+	<li><a href="#" class="news-item" data-article="article4">Rumour Mill: Is Club Legend Cian Mulligan Eyeing an Early 2025 Return?</a></li>
+	<li><a href="#" class="news-item" data-article="article5">Former Starting Centre-Back Tadhg Molloy Tells his Side of Controversial Club Exit</a></li>
+
+</ul>
+</div>
+
+<div id="articleModal" class="modal">
+<div class="modal-content">
+<div id="articleContent"></div>
+<button id="closeModal" class="close-btn">Close</button>
+
+</div>
+</div>
+
+
+
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script> 
+window.onload = function () {
+	const map= L.map('map').setView([53.3331413,-6.5589580], 15);
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>  contributors'}) 
+	.addTo(map);
+	const clubMarker = L.marker([53.3331413,-6.5589580]).addTo(map) ;
+	map.invalidateSize();
+};
+</script>
+
+<script src="Java Script.js"></script>
+
+
+
+
+
+</body>
+</html>
+
+
+
+

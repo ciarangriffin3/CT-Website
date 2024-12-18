@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+	
+ <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, inital-scale=1.0">
+
+<title>Celbridge Town - Our most recent in-game pictures and training videos!</title>
+
+<meta name="description" content="Scroll through some in-game snaps and our latest training video!">
+
+<meta name="keywords" content="Celbridge Town AFC, football club,  league">
+
+<meta name="author" content="Celbridge Town AFC">
+
+<link	href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Gallery.css">
+</head>
+
+
+<body>
+	<header>
+		<img src="C:\Users\ciara\Pictures\updated club logo.jpg" alt="Club Logo" class="header-img left-img">
+		<img src="Images & Videos/IMG_0920.jpg" class="header-img right-img">
+	<h1> Celbridge Town AFC</h1>
+	<p> Our gallery is home to the club's latest in-game pictures and occasional insights into our training sessions! </p>
+
+	<nav class="navigation-bar">
+		<a href="Home Page.html">Home Page</a>
+		<a href="League Table.html">League Table</a>
+		<a href="Contact Form.html">Contact Form</a>
+	</nav>
+	</header>
+
+<div class="galvid-container">	
+
+<div class="gallery-container">
+<img id="gallery-image" src="Images & Videos/IMG_0926.JPG" alt="Gallery Image">
+<button id="prev-btn" class="nav-btn">Previous</button>
+<button id="next-btn" class="nav-btn">Next</button>
+</div>
+
+<div class="video-container">
+	<video width="400" height="600" controls>
+	<source src="Images & Videos/SPGU0603.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+</video>
+</div>
+</div>
+
+<script >
+const images = [
+	'Images & Videos/IMG_0926.JPG',
+	'Images & Videos/IMG_0925.JPG',
+	'Images & Videos/IMG_0924.JPG',
+	'Images & Videos/IMG_0923.JPG',
+	'Images & Videos/IMG_0922.JPG',
+	'Images & Videos/IMG_0921.JPG',
+	'Images & Videos/IMG_0919.JPG',
+	'Images & Videos/IMG_0918.JPG',
+	'Images & Videos/IMG_0917.JPG',
+	'Images & Videos/IMG_0915.JPG',
+];
+
+let currentIndex = 0;
+const galleryImage = document.getElementById("gallery-image")
+const nextBtn = document.getElementById("next-btn")
+const prevBtn = document.getElementById("prev-btn")
+
+function updateImage() {
+	galleryImage.src = images[currentIndex]
+}
+
+prevBtn.addEventListener("click", () => {
+	currentIndex = (currentIndex - 1 + images.length) % images.length;
+	updateImage();
+});
+nextBtn.addEventListener("click", () => {
+	currentIndex = (currentIndex + 1) % images.length;
+	updateImage();
+});
+
+updateImage();
+
+</script>
+
+
+<h3> For any queries, contact us <a href="mailto;celbridgetownafc000@outlook.com">here </a>.</h3>
+<p class="copyright">&copy; 2024 Celbridge Town AFC</p>
+
+
+
+</body>
+</html>
+
+
+
+

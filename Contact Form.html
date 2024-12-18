@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+	
+ <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, inital-scale=1.0">
+
+<title>Celbridge Town - Join the team!</title>
+
+<meta name="description" content="Fill out the contact form to join as we continue to look for more players and staff!">
+
+<meta name="keywords" content="Celbridge Town AFC, football club,  league">
+
+<meta name="author" content="Celbridge Town AFC">
+
+
+<link	href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Contact Form.css">
+</head>
+
+
+<body>
+	<header>
+		<img src="C:\Users\ciara\Pictures\updated club logo.jpg" alt="Club Logo" class="header-img left-img">
+		<img src="Images & Videos/IMG_0920.jpg" class="header-img right-img">
+	<h1> Celbridge Town AFC</h1>
+	<p> If you have aspirations of playing or managing for the club, get in contact with us here! </p>
+
+	<nav class="navigation-bar">
+		<a href="Home Page.html">Home Page</a>
+		<a href="Gallery.html">Gallery</a>
+		<a href="League Table.html">League Table</a>
+	</nav>
+	</header>
+
+
+<form class="contact-form">
+	<h1>Looking to join the team? Fill in this form!</h1>
+
+	<div class="form-group">
+		<label for="name">Full Name:</label>
+		<input type="text" id="name" name="name" placeholder="Enter your full name" required>
+	</div>
+
+	<div class="form-group">
+		<label for="email">Email Address:</label>
+		<input type="email" id="email" name="email" placeholder="Enter your email" required>
+	</div>
+
+	<div class="form-group">
+		<label for="position">Preferred Position?</label>
+		<select id="position" name="position" required>
+			<option value="">Select a Position</option>
+			<option value="goalkeeper">Goalkeeper</option>
+			<option value="defender">Defender (LB,CB,RB)</option>
+			<option value="midfielder">Midfielder (CDM,CM,CAM)</option>
+			<option value="forward">Forward (LW,ST,RW)</option>
+			<option value="manager">Managerial Staff</option>
+		</select>
+
+		<div class="form-group">
+			<label>Have you played/managed for a club before?</label>
+			<div class="options">
+				<label><input type="radio" name="experience" value="Yes"> Yes</label>
+				<label><input type="radio" name="experience" value="No"> No</label>
+			</div>
+		</div>
+
+		<div class="form-group" id="experienceexpanded-group">
+			<label for="experienceexppanded">Briefly mention previous clubs and experience:</label>
+			<textarea id="experienceexppanded" name="experienceexppanded" rows="5" placeholder="Write here..."></textarea>
+		</div>
+
+		<div class="form-group">
+			<label for="satisfaction">How satisfied are you with this form? (1-10)</label>
+			<input type="range" id="satisfaction" name="satisfaction" min="1" max="10" class="slider">
+		</div>
+
+		<div class="form-group">
+			<button type="submit">Submit</button>
+		</div>
+	</form>
+
+
+
+<p class="copyright">&copy; 2024 Celbridge Town AFC</p>
+
+<script>
+	const experienceYes = document.querySelector('input[name="experience"][value="Yes"]');
+	const experienceNo = document.querySelector('input[name="experience"][value="No"]');
+	const experienceTextAreaGroup = document.getElementById("experienceexpanded-group");
+
+	function toggleExperienceTextArea() {
+		if(experienceNo.checked) {
+			experienceTextAreaGroup.style.display = 'none';
+		} else {
+			experienceTextAreaGroup.style.display = 'block';
+		}
+	}
+
+	experienceYes.addEventListener('change', toggleExperienceTextArea);
+	experienceNo.addEventListener('change', toggleExperienceTextArea);
+
+	toggleExperienceTextArea();
+</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+header {
+	background-color: #4542f5;
+	color: #ffffff;
+	padding: 20px 0;
+	margin-bottom: 20px;
+	position: relative;
+	align-items: center;
+	width: auto;
+
+
+}
+
+body {
+	background-color: #e6f7ff;
+}
+
+
+h1 {
+	font-family:"Playfair Display",serif;
+	text-align: center;
+	font-size: 2.5em;
+}
+
+p {
+	text-align: center;
+font-family: Robota Slab, serif;
+font-size: em;
+}
+
+.navigation-bar{
+	text-align: center;
+	font-family: Montserrat, sans-serif;
+}
+
+
+.navigation-bar a {
+	color: #4542f5;
+	text-decoration: none;
+	padding: 10px 20px;
+	margin-bottom: 0 15px;
+	background-color: #e6f7ff;
+	border-radius: 5px;
+}
+
+header img{
+	position: absolute;
+	top: 10px;
+	bottom: 10px;
+	width: 160px;
+	height: 160px;
+	object-fit: contain;
+}
+
+.left-img {
+	left: 10px;
+	margin: 10px;
+	}
+.right-img{
+	right: 10px;
+	height: 160px;
+	width: auto;
+	margin: 10px;
+}
+
+table {
+	width: 95%;
+	border-collapse: collapse;
+	margin: 20px auto; 
+	background-color: #ffffff;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+	border: 1px solid #050505;
+	padding: 10px;
+	text-align: center;
+}
+
+th {
+	background-color: #4542f5;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+td{
+	background-color: #ffffff;
+}
+
+h3 {
+	color: #000000;
+}
+
+
+.copyright {
+	right: 10px;
+	font-size: .73m;
+	font-family: Georgia, serif;
+}
